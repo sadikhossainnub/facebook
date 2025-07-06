@@ -4,32 +4,46 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "page_access_token",
-  "verify_token",
-  "page_id",
-  "webhook_url"
+  "access_token",
+  "phone_number_id",
+  "business_account_id",
+  "webhook_verify_token",
+  "automatically_download_images",
+  "automatically_download_audio"
  ],
  "fields": [
   {
-   "fieldname": "page_access_token",
+   "fieldname": "access_token",
    "fieldtype": "Password",
-   "label": "Page Access Token"
+   "label": "Access Token",
+   "length": 250
   },
   {
-   "fieldname": "verify_token",
-   "fieldtype": "Password",
-   "label": "Verify Token"
-  },
-  {
-   "fieldname": "page_id",
+   "fieldname": "phone_number_id",
    "fieldtype": "Data",
-   "label": "Page ID"
+   "label": "Phone Number ID"
   },
   {
-   "fieldname": "webhook_url",
+   "fieldname": "business_account_id",
    "fieldtype": "Data",
-   "label": "Webhook URL",
-   "read_only": 1
+   "label": "Business Account ID"
+  },
+  {
+   "fieldname": "webhook_verify_token",
+   "fieldtype": "Data",
+   "label": "Webhook Verify Token"
+  },
+  {
+   "default": "0",
+   "fieldname": "automatically_download_images",
+   "fieldtype": "Check",
+   "label": "Automatically Download Images"
+  },
+  {
+   "default": "0",
+   "fieldname": "automatically_download_audio",
+   "fieldtype": "Check",
+   "label": "Automatically Download Audio"
   }
  ],
  "issingle": 1,

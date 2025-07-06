@@ -20,6 +20,18 @@ class MessengerSettings(Document):
         # if not self.app_secret:
         #     frappe.throw("App Secret must be set in Messenger Settings")
 
+    def validate_integration(self):
+        # Adapt validation to new fields from waba_settings reference
+        if self.integration_enabled:
+            if not self.access_token:
+                frappe.throw("Access Token must be set if integration is enabled")
+            if not self.phone_number_id:
+                frappe.throw("Phone Number ID must be set if integration is enabled")
+            if not self.business_account_id:
+                frappe.throw("Business Account ID must be set if integration is enabled")
+            if not self.webhook_verify_token:
+                frappe.throw("Webhook Verify Token must be set if integration is enabled")
+
     def set_webhook_url(self):
         if not self.webhook_url:
             self.webhook_url = frappe.utils.get_url("/api/method/facebook.api.messenger_webhook")
