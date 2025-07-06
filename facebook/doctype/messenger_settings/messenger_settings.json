@@ -1,0 +1,38 @@
+{
+    "name": "Messenger Settings",
+    "issingle": 1,
+    "doctype": "DocType",
+    "module": "Facebook",
+    "fields": [
+        {
+            "fieldname": "page_access_token",
+            "fieldtype": "Password",
+            "label": "Page Access Token"
+        },
+        {
+            "fieldname": "verify_token",
+            "fieldtype": "Password",
+            "label": "Verify Token"
+        },
+        {
+            "fieldname": "page_id",
+            "fieldtype": "Data",
+            "label": "Page ID"
+        },
+        {
+            "fieldname": "webhook_url",
+            "fieldtype": "Data",
+            "label": "Webhook URL",
+            "read_only": 1
+        }
+    ],
+    "permissions": [
+        {
+            "role": "System Manager",
+            "read": 1,
+            "write": 1,
+            "create": 1,
+            "delete": 1
+        }
+    ]
+}

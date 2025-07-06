@@ -1,0 +1,36 @@
+{
+    "name": "Messenger Message",
+    "doctype": "DocType",
+    "module": "Facebook",
+    "istable": 1,
+    "fields": [
+        {
+            "fieldname": "parent",
+            "fieldtype": "Link",
+            "label": "Conversation",
+            "options": "Messenger Conversation",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "content",
+            "fieldtype": "Text",
+            "label": "Content"
+        },
+        {
+            "fieldname": "timestamp",
+            "fieldtype": "Datetime",
+            "label": "Timestamp"
+        },
+        {
+            "fieldname": "sender",
+            "fieldtype": "Data",
+            "label": "Sender"
+        },
+        {
+            "fieldname": "direction",
+            "fieldtype": "Select",
+            "label": "Direction",
+            "options": "Inbound\nOutbound"
+        }
+    ]
+}

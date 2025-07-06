@@ -1,0 +1,52 @@
+{
+    "name": "Messenger Conversation",
+    "doctype": "DocType",
+    "module": "Facebook",
+    "fields": [
+        {
+            "fieldname": "contact",
+            "fieldtype": "Link",
+            "label": "Contact",
+            "options": "Contact"
+        },
+        {
+            "fieldname": "lead",
+            "fieldtype": "Link",
+            "label": "Lead",
+            "options": "Lead"
+        },
+        {
+            "fieldname": "fb_psid",
+            "fieldtype": "Data",
+            "label": "Facebook PSID",
+            "unique": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "label": "Status",
+            "options": "Open\nClosed",
+            "default": "Open"
+        },
+        {
+            "fieldname": "last_message_time",
+            "fieldtype": "Datetime",
+            "label": "Last Message Time"
+        },
+        {
+            "fieldname": "messages",
+            "fieldtype": "Table",
+            "label": "Messages",
+            "options": "Messenger Message"
+        }
+    ],
+    "permissions": [
+        {
+            "role": "System Manager",
+            "read": 1,
+            "write": 1,
+            "create": 1,
+            "delete": 1
+        }
+    ]
+}
